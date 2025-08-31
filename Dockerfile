@@ -7,6 +7,7 @@ COPY . /src
 WORKDIR /src
 
 RUN git submodule update --init --recursive
+RUN sed -i 's/ -mno-ieee-fp//g' modules/vorbis/configure.ac
 
 RUN find ./scripts -type f -name "*.sh" -exec dos2unix {} \;
 RUN chmod +x ./scripts/*.sh
