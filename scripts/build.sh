@@ -14,16 +14,13 @@ if [ "$FFMPEG_SKIP_LIBS" = false ] ; then
     $SCRIPT_ROOT/build-libwebp.sh
     $SCRIPT_ROOT/build-ogg.sh
     $SCRIPT_ROOT/build-opus.sh
-    $SCRIPT_ROOT/build-rubberband.sh
     $SCRIPT_ROOT/build-theora.sh
     $SCRIPT_ROOT/build-vorbis.sh
     $SCRIPT_ROOT/build-openh264.sh
     $SCRIPT_ROOT/build-kvazaar.sh
     $SCRIPT_ROOT/build-svtav1.sh
+	$SCRIPT_ROOT/build-samplerate.sh
 
-    # GPL
-    $SCRIPT_ROOT/build-x264.sh
-    $SCRIPT_ROOT/build-x265.sh
 fi
 
 $SCRIPT_ROOT/configure-ffmpeg.sh

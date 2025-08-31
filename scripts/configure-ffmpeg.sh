@@ -22,7 +22,6 @@ FLAGS=(
   --enable-libopus
   --enable-libwebp
   --enable-libsvtav1
-  --enable-librubberband
   --disable-stripping
   --disable-programs      # disable programs build (incl. ffplay, ffprobe & ffmpeg)
   --disable-doc
@@ -42,16 +41,6 @@ FLAGS=(
   --dep-cc=emcc
 )
 
-if [ "$FFMPEG_LGPL" = false ] ; then
-    FLAGS+=(
-        --enable-gpl
-        --enable-libx264
-        --enable-libx265
-    )
-fi
-
-sed -i 's/    librubberband//g' $LIB_PATH/configure
-sed -i 's/    vapoursynth/librubberband\nvapoursynth/g' $LIB_PATH/configure
 
 echo "FFMPEG_CONFIG_FLAGS=${FLAGS[@]}"
 (cd $LIB_PATH && \

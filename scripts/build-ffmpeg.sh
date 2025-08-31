@@ -38,7 +38,7 @@ FLAGS=(
   -lz
   -lopus
   -lwebp -lwebpmux -lsharpyuv
-  -lrubberband -lsamplerate -Lrubberband -Lsamplerate
+  -lsamplerate -Lsamplerate
 
   # Goes after `-l -L` switches see: https://gitlab.com/AOMediaCodec/SVT-AV1/-/issues/2052
   # there used to be `fftools/ffmpeg.c fftools/ffmpeg_dec.c ...` but the list wen too long already
@@ -66,14 +66,6 @@ FLAGS=(
   -s DEFAULT_PTHREAD_STACK_SIZE=2MB     # required since 3.1.27 (Uncaught Infinity runtime error)
   -o $OUTPUT_PATH
 )
-
-if [ "$FFMPEG_LGPL" = false ] ; then
-    OUTPUT_FILENAME="$OUTPUT_FILENAME-lgpl"
-    FLAGS+=(
-        -lx264
-        -lx265
-    )
-fi
 
 echo "FFMPEG_EM_FLAGS=${FLAGS[@]}"
 (cd $LIB_PATH && \
