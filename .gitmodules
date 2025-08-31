@@ -1,95 +1,80 @@
 [submodule "modules/emsdk"]
 	path = modules/emsdk
 	url = https://github.com/emscripten-core/emsdk
-	branch = main
+	branch = 4.0.13
 	ignore = all
 [submodule "modules/ffmpeg"]
 	path = modules/ffmpeg
-	url = https://github.com/wide-video/ffmpeg
-	branch = wide.video
+	url = https://github.com/FFmpeg/FFmpeg
+	branch = n8.0
 	ignore = all
 [submodule "modules/aom"]
 	path = modules/aom
-	url = https://github.com/wide-video/aom
-	branch = wide.video
+	url = https://github.com/RaimundoLai/aom
+	branch = v3.12.1
 	ignore = all
 [submodule "modules/kvazaar"]
 	path = modules/kvazaar
-	url = https://github.com/wide-video/kvazaar
-	branch = wide.video
+	url = https://github.com/ultravideo/kvazaar
+	branch = v2.3.1
 	ignore = all
 [submodule "modules/lame"]
 	path = modules/lame
-	url = https://github.com/wide-video/lame
-	branch = wide.video
+	url = https://github.com/ffmpegwasm/lame
+	branch = master
 	ignore = all
 [submodule "modules/libsamplerate"]
 	path = modules/libsamplerate
-	url = https://github.com/wide-video/libsamplerate
-	branch = wide.video
+	url = https://github.com/libsndfile/libsamplerate
+	branch = 0.2.2
 	ignore = all
 [submodule "modules/libsndfile"]
 	path = modules/libsndfile
-	url = https://github.com/wide-video/libsndfile
-	branch = wide.video
+	url = https://github.com/libsndfile/libsndfile
+	branch = 1.2.2
 	ignore = all
 [submodule "modules/libvpx"]
 	path = modules/libvpx
-	url = https://github.com/wide-video/libvpx
-	branch = wide.video
+	url = https://github.com/webmproject/libvpx
+	branch = v1.15.2
 	ignore = all
 [submodule "modules/libwebp"]
 	path = modules/libwebp
-	url = https://github.com/wide-video/libwebp
-	branch = wide.video
+	url = https://github.com/webmproject/libwebp
+	branch = v1.6.0
 	ignore = all
 [submodule "modules/Ogg"]
 	path = modules/Ogg
-	url = https://github.com/wide-video/Ogg
-	branch = wide.video
+	url = https://github.com/xiph/ogg
+	branch = v1.3.6
 	ignore = all
 [submodule "modules/openh264"]
 	path = modules/openh264
-	url = https://github.com/wide-video/openh264
-	branch = wide.video
+	url = https://github.com/cisco/openh264
+	branch = v2.6.0
 	ignore = all
 [submodule "modules/opus"]
 	path = modules/opus
-	url = https://github.com/wide-video/opus
-	branch = wide.video
-	ignore = all
-[submodule "modules/rubberband"]
-	path = modules/rubberband
-	url = https://github.com/wide-video/rubberband
-	branch = wide.video
+	url = https://github.com/xiph/opus
+	branch = v1.5.2
 	ignore = all
 [submodule "modules/svtav1"]
 	path = modules/svtav1
-	url = https://github.com/wide-video/svtav1
-	branch = wide.video
+	url = https://github.com/RaimundoLai/svtav1
+	branch = v3.1.2
 	ignore = all
 [submodule "modules/theora"]
 	path = modules/theora
-	url = https://github.com/wide-video/theora
-	branch = wide.video
+	url = https://github.com/xiph/theora
+	branch = v1.2.0
 	ignore = all
 [submodule "modules/vorbis"]
 	path = modules/vorbis
-	url = https://github.com/wide-video/vorbis
-	branch = wide.video
-	ignore = all
-[submodule "modules/x264"]
-	path = modules/x264
-	url = https://github.com/wide-video/x264
-	branch = wide.video
-	ignore = all
-[submodule "modules/x265"]
-	path = modules/x265
-	url = https://github.com/wide-video/x265
-	branch = wide.video
+	url = https://github.com/xiph/vorbis
+	branch = v1.3.7
 	ignore = all
 [submodule "modules/zlib"]
 	path = modules/zlib
-	url = https://github.com/wide-video/zlib
-	branch = wide.video
+	url = https://github.com/madler/zlib
+	branch = v1.3.1
 	ignore = all
