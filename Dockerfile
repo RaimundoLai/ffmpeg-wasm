@@ -1,6 +1,7 @@
 FROM debian:12.5 as builder
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y git dos2unix
+RUN apt-get install -y git python3.11 build-essential cmake autoconf autogen automake libtool pkg-config ragel wget
 
 COPY . /src
 

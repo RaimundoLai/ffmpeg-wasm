@@ -1,12 +1,12 @@
 [submodule "modules/emsdk"]
 	path = modules/emsdk
 	url = https://github.com/emscripten-core/emsdk
-	branch = 4.0.13
+	branch = 4.0.5
 	ignore = all
 [submodule "modules/ffmpeg"]
 	path = modules/ffmpeg
 	url = https://github.com/FFmpeg/FFmpeg
-	branch = n8.0
+	branch = n6.1.3
 	ignore = all
 [submodule "modules/aom"]
 	path = modules/aom
