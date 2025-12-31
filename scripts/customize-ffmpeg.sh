@@ -30,3 +30,12 @@ replace "try{for(var i=0;i<length;i++){stream.tty.ops.put_char(stream.tty,buffer
 replace "for(var i=0;i<length;i++){var result;try{result=input()}catch(e){throw new FS.ErrnoError(29)}if(result===undefined&&bytesRead===0){throw new FS.ErrnoError(6)}if(result===null||result===undefined)break;bytesRead++;buffer[offset+i]=result}" \
 	"if(input===Module.stdin){var result;try{result=input(length)}catch(e){throw new FS.ErrnoError(29)}if(result===undefined){throw new FS.ErrnoError(6)}bytesRead = result.byteLength;buffer.set(result, offset);}else{for(var i=0;i<length;i++){var result;try{result=input()}catch(e){throw new FS.ErrnoError(29)}if(result===undefined&&bytesRead===0){throw new FS.ErrnoError(6)}if(result===null||result===undefined)break;bytesRead++;buffer[offset+i]=result}}" \
 	$OUTPUT_PATH_WV
+
+# replacing locateFile script in ffmpeg.js
+replace 'function findWasmBinary(){return locateFile("ffmpeg-lgpl.wasm")}' \
+'function findWasmBinary(){return locateFile("ffmpeg-lgpl.wasm")}function _locateFile(path,prefix){const mainScriptUrlOrBlob=Module["mainScriptUrlOrBlob"];if(mainScriptUrlOrBlob){const{wasmURL,workerURL}=JSON.parse(atob(mainScriptUrlOrBlob.slice(mainScriptUrlOrBlob.lastIndexOf("#")+1)));if(path.endsWith(".wasm"))return wasmURL;if(path.endsWith(".worker.js"))return workerURL}return prefix+path}Module["locateFile"]=_locateFile;' \
+$OUTPUT_PATH_WV
+
+replace 'function findWasmBinary(){return locateFile("ffmpeg-lgpl.wasm")}' \
+'function findWasmBinary(){return locateFile("ffmpeg-lgpl.wasm")}function _locateFile(path,prefix){const mainScriptUrlOrBlob=Module["mainScriptUrlOrBlob"];if(mainScriptUrlOrBlob){const{wasmURL,workerURL}=JSON.parse(atob(mainScriptUrlOrBlob.slice(mainScriptUrlOrBlob.lastIndexOf("#")+1)));if(path.endsWith(".wasm"))return wasmURL;if(path.endsWith(".worker.js"))return workerURL}return prefix+path}Module["locateFile"]=_locateFile;' \
+$OUTPUT_PATH
